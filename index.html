@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Tip Calculator</title>
+</head>
+<body>
+  <div id="container">
+    <div>
+      <h1 class="title">Tip Calculator</h1>
+    </div> 
+
+    <div>
+      <form class="tipsForm" id="tipsForm">
+        <label for="bill">
+          <p>Insert the bill´s cost:</p>
+        </label>
+          $ <input type="text" placeholder="0.00" name="bill" id="bill" maxlength="6" class="formInput" required>
+        <br>
+        <label for="services">
+          <p>Select the quality of the provided service:</p>
+        </label>
+        <select name="services" id="services" class="formSelect" required>
+          <option disabled selected value="0">Default</option>
+          <option value="0.25">25% - 5⭐ service</option>
+          <option value="0.20">20% - 4⭐ service</option>
+          <option value="0.15">15% - 3⭐ service</option>
+          <option value="0.10">10% - 2⭐ service</option>
+          <option value="0.05">05% - 1⭐ service</option>
+        </select>
+        <label for="people">
+          <p>People to pay the bill:</p>
+          <input type="number" placeholder="1" name="people" id="people" min="1" max="99" class="formInput" required>
+        </label>
+        <br><br>
+        <button type="submit" class="formSubmit">Calculate</button>
+      </form>
+    </div>
+    <div id="result" class="result">
+      Tip:
+      $<span id="tip">00.00</span>
+      <p id="each" class="each">each</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
